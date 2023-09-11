@@ -6,7 +6,7 @@ export default function ChatMessages({ messages, user, roomId }) {
         const isSender = message.uid === user.uid 
         
         return (
-            <div className={`chat__message ${isSender ? "chat__message--sender" : ""}`}>
+            <div key={user.id}  className={`chat__message ${isSender ? "chat__message--sender" : ""}`}>
 
                 <span className="chat__name">{message.name}</span>
                 <span className="chat__message--message">{message.message}</span>
