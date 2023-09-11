@@ -1,35 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Swim Starter Technical Assessment
 
-## Getting Started
+Production Link : https://swim-starter-chat-6bdscq9sf-silfarri.vercel.app/
 
-First, run the development server:
+No other steps are required (i.e no need to git clone or npm install anything) 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Tech used: Firebase and NextJs 13. Firestore was used to create documents for the rooms, messages and users with real time updates. Google OAuth was used as an authentication method (Since it can be easily implemented as a provider on Firebase) 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+User Stories: 
+- User logs in using Google
+- User can create individual rooms
+- User can start chats with other users who have registered
+- User can send messages to these users individually
+- User can also send messages to global chat rooms that can act as group chats
+  
+Future improvements: 
+- sending images/audio files 
+- cleaning up component trees/ code quality 
+- implementing private chat rooms through permissions/protected routes
+- Potential for migrating to NodeJS and MongoDB stack for better scalability 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# swim_starter_chat_app
+Considerations
+-initially considered usin WebSockets e.g socket.io but due to limited time did not manage to do so as Firebase has ease of implementation. Firebase is easily scalable as is and for the purpose of this assessment it is sufficient. Would consider a NodeJs and a NoSQL db for production/building a specialized app. 
